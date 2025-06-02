@@ -55,3 +55,45 @@ nav img {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+/* Style skip-link to show only when focused */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Style all images with box model */
+img {
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Add hover effect to images */
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Flex container for images */
+main > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Use nth-child to alternate border-radius */
+main > div img:nth-child(odd) {
+  border-radius: 10px;
+}
+main > div img:nth-child(even) {
+  border-radius: 50%;
+}
